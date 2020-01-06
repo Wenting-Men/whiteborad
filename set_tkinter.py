@@ -15,6 +15,7 @@ from tkinter import ttk
 def startup_dialog(labeltext):
     result = None
     rooty_dialog = tkinter.Tk()
+    #框架控件；在屏幕上显示一个矩形区域，多用来作为容器
     big_frame = ttk.Frame(rooty_dialog)
     big_frame.pack(fill='both', expand=True)
 
@@ -28,12 +29,14 @@ def startup_dialog(labeltext):
         rooty_dialog.destroy()   # stops rooty_dialog.mainloop()
 
     label = ttk.Label(big_frame, text=labeltext)
+    #确定位置
     label.place(relx=0.5, rely=0.3, anchor='center')
+    #输入控件；用于显示简单的文本内容
     entry = ttk.Entry(big_frame)
     entry.place(relx=0.5, rely=0.5, anchor='center')
     okbutton = ttk.Button(big_frame, text="OK", command=on_ok)
     okbutton.place(relx=0.5, rely=0.8, anchor='center')
-
+    # 设定窗口的大小(长 * 宽)
     rooty_dialog.geometry('250x150')
     rooty_dialog.mainloop()
 
