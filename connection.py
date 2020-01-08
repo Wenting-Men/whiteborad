@@ -1,7 +1,7 @@
 import socket
 import time
 
-from whiteborad.UserDialog import UserDialog
+from UserDialog import UserDialog
 
 
 class Connection:
